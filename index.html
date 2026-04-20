@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Absensi & Kas TJKT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-brand">TJKT SMKN 1 Kragilan</div>
+    <div class="nav-menu">
+        <button onclick="bukaHalaman('tjkt1')">X TJKT 1</button>
+        <button onclick="bukaHalaman('tjkt2')">X TJKT 2</button>
+        <button onclick="bukaHalaman('pengaduan')">Pengaduan</button>
+    </div>
+</nav>
+
+<div class="container">
+    <section id="tjkt1">
+        <h1>Absensi X TJKT 1</h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Siswa</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="list-siswa-1"></tbody>
+            </table>
+        </div>
+
+        <div class="kas-card">
+            <h3>Catatan Kas X TJKT 1</h3>
+            <div class="kas-input">
+                <label>Pemasukan (Rp):</label>
+                <input type="number" id="in1" oninput="hitungKas(1)" placeholder="0">
+                <label>Pengeluaran (Rp):</label>
+                <input type="number" id="out1" oninput="hitungKas(1)" placeholder="0">
+            </div>
+            <div class="kas-result">
+                <strong>Sisa Saldo: <span id="sisa1">Rp 0</span></strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="tjkt2" style="display:none;">
+        <h1>Absensi X TJKT 2</h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Siswa</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="list-siswa-2"></tbody>
+            </table>
+        </div>
+
+        <div class="kas-card">
+            <h3>Catatan Kas X TJKT 2</h3>
+            <div class="kas-input">
+                <label>Pemasukan (Rp):</label>
+                <input type="number" id="in2" oninput="hitungKas(2)" placeholder="0">
+                <label>Pengeluaran (Rp):</label>
+                <input type="number" id="out2" oninput="hitungKas(2)" placeholder="0">
+            </div>
+            <div class="kas-result">
+                <strong>Sisa Saldo: <span id="sisa2">Rp 0</span></strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="pengaduan" style="display:none;">
+        <h1>Form Pengaduan Sekolah</h1>
+        <div class="form-card">
+            <p>Laporkan kejadian bullying atau masalah fasilitas di sini.</p>
+            <form onsubmit="kirimLaporan(event)">
+                <label>Jenis Laporan:</label>
+                <select id="jenisLaporan">
+                    <option>Bullying / Perundungan</option>
+                    <option>Fasilitas Rusak</option>
+                    <option>Kehilangan Barang</option>
+                    <option>Lainnya</option>
+                </select>
+                <label>Detail Kejadian:</label>
+                <textarea id="detailLaporan" rows="5" placeholder="Ceritakan kejadian secara singkat..."></textarea>
+                <button type="submit" class="btn-send">Kirim Laporan</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

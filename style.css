@@ -1,0 +1,24 @@
+* { box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; margin: 0; color: #333; }
+
+nav { background: #1e3a8a; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+.nav-brand { font-weight: bold; font-size: 1.2rem; }
+.nav-menu button { background: #3b82f6; border: none; color: white; padding: 8px 15px; cursor: pointer; border-radius: 5px; margin-left: 5px; transition: 0.3s; }
+.nav-menu button:hover { background: #2563eb; }
+
+.container { padding: 20px; max-width: 800px; margin: auto; }
+h1 { color: #1e3a8a; border-bottom: 2px solid #3b82f6; padding-bottom: 10px; font-size: 1.5rem; }
+
+.table-container { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #3b82f6; color: white; }
+select { padding: 5px; border-radius: 4px; border: 1px solid #ccc; }
+
+.kas-card, .form-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-top: 20px; border-left: 5px solid #10b981; }
+.kas-input label, .form-card label { display: block; margin: 10px 0 5px; font-weight: bold; }
+input, textarea, #jenisLaporan { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px; }
+.kas-result { font-size: 1.2rem; color: #059669; margin-top: 10px; }
+
+.btn-send { background: #ef4444; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 100%; font-weight: bold; }
+.btn-send:hover { background: #dc2626; }
