@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Kelas X TJKT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>X TJKT Hub</h2>
+        <nav>
+            <button class="nav-btn active" onclick="showSection('absensi')">📊 Absensi</button>
+            <button class="nav-btn" onclick="showSection('kas')">💰 Uang Kas</button>
+            <button class="nav-btn" onclick="showSection('pengaduan')">📢 Pengaduan</button>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <section id="absensi" class="content-section active">
+            <header>
+                <h1>Presensi Siswa</h1>
+                <select id="class-select-absensi" onchange="loadAbsensi()">
+                    <option value="tjkt1">X TJKT 1 (37 Siswa)</option>
+                    <option value="tjkt2">X TJKT 2 (36 Siswa)</option>
+                </select>
+            </header>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Siswa (Klik Nama untuk Edit)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-absensi"></tbody>
